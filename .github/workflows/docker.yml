@@ -13,10 +13,10 @@ jobs:
         run: echo "Initialisation de ${STEP1}"
 
       - name: Étape 2 - Récupération du code
-        run: echo "Récupération du code"
+        run: echo "STEP2= ${{vars.VAR}}"
 
-      - name: Étape 3 - Build
-        run: echo "Build de l'application"
+      - name: Étape 3 - Variables Secret
+        run: echo "STEP3= ${{ Secret.STEP3 }}"
 
       - name: Étape 4 - Tests
         run: echo "Exécution des tests"
