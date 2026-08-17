@@ -6,9 +6,11 @@ jobs:
   demo:
     name: Démonstration CI
     runs-on: Ndioba-runner
+    env:
+      STEP1: "Workflow-Initialisation"
     steps:
       - name: Étape 1 - Initialisation
-        run: echo "Initialisation du pipeline CI"
+        run: echo "Initialisation de ${STEP1}"
 
       - name: Étape 2 - Récupération du code
         run: echo "Récupération du code"
