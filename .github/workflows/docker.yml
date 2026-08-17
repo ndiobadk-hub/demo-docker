@@ -1,26 +1,26 @@
-name: CI -Pipeline Informatif
+name: CI - Pipeline Informatif
 
-on: push:
+on: push
 
-    jobs:
-      demo:
-        name: Demonstration CI
-        runs-on: Ndioba-runner
-        steps:
-          - name: Etape 1 - Initialisation
-            run: echo "Initialisation du pipeline CI"
+jobs:
+  demo:
+    name: Démonstration CI
+    runs-on: Ndioba-runner
+    steps:
+      - name: Étape 1 - Initialisation
+        run: echo "Initialisation du pipeline CI"
 
-          - name: Etape 2 - Recuperation du code 
-            run: echo "Recuperation du code "
+      - name: Étape 2 - Récupération du code
+        run: echo "Récupération du code"
 
-          - name: Etape 3 - Build 
-            run: echo "Build de l'application"
+      - name: Étape 3 - Build
+        run: echo "Build de l'application"
 
-          - name: Etape 4 - Test
-            run: echo "Execution des tests"
+      - name: Étape 4 - Tests
+        run: echo "Exécution des tests"
 
-          - name: Etape 5 - Packaging
-            run: echo "Packaging de l'application"
+      - name: Étape 5 - Packaging
+        run: echo "Packaging de l'application"
 
-          - name: Etape 6 - Fin du pipeline
-            run: echo "Pipeline CI termine avec succes !" 
+      - name: Étape 6 - Fin du pipeline
+        run: echo "Pipeline terminé avec succès !"
