@@ -1,11 +1,25 @@
-name: testing github workflows
+name: CI -Pipeline Informatif
+on:
+  push:
+    jobs:
+      init:
+        name: Demonstration CI
+        runs-on: Ndioba-runner
+        steps:
+          - name: Etape 1 - Initialisation
+            run: echo "Initialisation du pipeline CI"
 
-on: push
+          - name: Etape 2 - Recuperation du code 
+            run: echo "Recuperation du code "
 
-jobs:
-   init: 
-      runs-on: Ndioba-runner
-      steps:
-        - run: echo "Hello Ndioba"
-        - run: echo %HOSTNAME%
-        - run: docker --version
+          - name: Etape 3 - Build 
+            run: echo "Build de l'application"
+
+          - name: Etape 4 - Test
+            run: echo "Execution des tests"
+
+          - name: Etape 5 - Packaging
+            run: echo "Packaging de l'application"
+
+          - name: Etape 6 - Fin du pipeline
+            run: echo "Pipeline CI termine avec succes !" 
