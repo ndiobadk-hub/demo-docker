@@ -1,6 +1,6 @@
 name: CI -Pipeline Informatif
-on:
-  push:
+on: push:
+
     jobs:
       init:
         name: Demonstration CI
