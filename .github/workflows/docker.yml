@@ -1,29 +1,10 @@
-name: Build and Push Docker Image
+name: testing github workflows
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: push
 
 jobs:
-  docker-build-push:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Récupérer le code
-        uses: actions/checkout@v4
-
-      - name: Se connecter à Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Construire l'image Docker
-        run: docker build -t ndiobadk/mon-application:1.0.0 .
-
-      - name: Publier l'image sur Docker Hub
-        run: docker push ndiobadk/mon-application:1.0.0
+   init: 
+      runs-on: ubuntu-lasted
+      steps:
+        -run: echo "Hello Ndioba"
+        -run: echo $HOSTNAME
