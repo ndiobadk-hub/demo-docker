@@ -6,6 +6,6 @@ jobs:
    init: 
       runs-on: Ndioba-runner
       steps:
-        -run: echo "Hello Ndioba"
-        -run: echo %HOSTNAME%
-        -run: docker --version
+        - run: echo "Hello Ndioba"
+        - run: echo $HOSTNAME
+        - run: docker --version
