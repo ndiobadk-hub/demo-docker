@@ -1,8 +1,9 @@
 name: CI -Pipeline Informatif
+
 on: push:
 
     jobs:
-      init:
+      demo:
         name: Demonstration CI
         runs-on: Ndioba-runner
         steps:
