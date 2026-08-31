@@ -16,7 +16,7 @@ jobs:
         run: echo "STEP2= ${{vars.VAR}}"
 
       - name: Étape 3 - Variables Secret
-        run: echo "STEP3= ${{ Secret.STEP3 }}"
+        run: echo "STEP3= ${{ secrets.STEP3 }}"
 
       - name: Étape 4 - Tests
         run: echo "Exécution des tests"
